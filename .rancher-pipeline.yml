@@ -1,2 +1,6 @@
-timeout: 60
-notification: {}
+stages:
+- name: Compile
+  steps:
+  - runScriptConfig:
+      image: java:8
+      shellScript: echo aa

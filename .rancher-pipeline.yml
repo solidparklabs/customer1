@@ -3,4 +3,4 @@ stages:
   steps:
   - runScriptConfig:
       image: java:8
-      shellScript: echo aa
+      shellScript: echo aa 

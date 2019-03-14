@@ -4,3 +4,15 @@ stages:
   - runScriptConfig:
       image: java:8
       shellScript: echo aa 
+- name: Upgrade Catalog Apps
+  steps:
+  - runScriptConfig:
+      image: jgreat/rancher-pipeline-deploy:0.0.2
+      shellScript: rancher-pipeline-deploy
+    env:
+      RANCHER_URL: https://application-service-factory.connect365.net/chartrepo/rdcap-dev/
+      RANCHER_CATALOG_NAME: rdcap-atlassian-jira
+    envFrom:
+    - sourceName: chart-creds
+      sourceKey: RANCHER_API_TOKEN
+      targetKey: RANCHER_API_TOKEN

@@ -15,4 +15,4 @@ stages:
     envFrom:
     - sourceName: chart-creds
       sourceKey: RANCHER_API_TOKEN
-      targetKey: RANCHER_API_TOKEN
+      targetKey: RANCHER_API_TOKEN 
